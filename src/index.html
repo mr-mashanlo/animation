@@ -1,0 +1,47 @@
+@@include('./parts/head.html', { 'title': 'Home Page', 'description': '' })
+
+  <div class="page">
+
+    @@include('./parts/header.html')
+
+    <section class="intro section" data-scroll-section>
+      <div class="container">
+        <h1 class="intro__title title title--h1 title--pink">
+          <span class="title__row" data-scroll data-scroll-speed="2" data-scroll-position="top">Text</span> <br>
+          <span class="title__row" data-scroll data-scroll-speed="1" data-scroll-position="top">Appeal</span>
+        </h1>
+        <div class="intro-composition">
+          <div class="intro-composition__box" data-scroll data-scroll-speed="3" data-scroll-position="top">
+            <img src="images/dist/monochrome-3.webp" alt="" class="intro-composition__image">
+            <svg class="intro-composition__circle" viewBox="0 0 510 510" xmlns="http://www.w3.org/2000/svg"><circle cx="255" cy="255" r="255" fill="#EFDEAA" fill-rule="nonzero"></circle></svg>
+            <svg class="intro-composition__hemi" viewBox="0 0 510 255" xmlns="http://www.w3.org/2000/svg"><circle cx="255" cy="255" r="255" fill="#F6F2F0" fill-rule="nonzero"></circle></svg>
+          </div>
+        </div>
+        <p class="intro__description intro__description--hight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quis minima dolor repudiandae, delectus quaerat in unde omnis enim.</p>
+      </div>
+    </section>
+
+    <section class="blog section">
+      <div class="container">
+        <div class="blog-gallery blog-gallery--topspace" data-scroll-section>
+          <img src="images/dist/pixel-11.webp" class="blog-gallery__image blog-gallery__image--one" data-scroll data-scroll-speed="1">
+          <img src="images/dist/pixel-9.webp" class="blog-gallery__image blog-gallery__image--two">
+          <img src="images/dist/pixel-10.webp" class="blog-gallery__image blog-gallery__image--three" data-scroll data-scroll-speed="2">
+        </div>
+        <h1 class="blog__title blog__title--hight title title--h1" data-scroll-section>
+          <span class="title__row" data-scroll data-scroll-speed="2">Oh la</span> <br>
+          <span class="title__row" data-scroll data-scroll-speed="1">la.</span>
+        </h1>
+        <a href="#" class="circle-button">Voir</a>
+      </div>
+    </section>
+
+    <footer class="footer section" data-scroll-section>
+      <div class="container">
+        <h2 class="title title--h2 title--orange section__title">Au fait, je suis Julie.</h2>
+      </div>
+    </footer>
+
+  </div>
+
+@@include('./parts/footer.html')

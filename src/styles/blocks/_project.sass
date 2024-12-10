@@ -1,0 +1,31 @@
+@use 'config/variables' as variables
+
+.project
+  &-list
+    display: grid
+    @media ( variables.$screen-sm )
+      grid-template-columns: repeat(2, 1fr)
+    &__item
+      border-bottom: .1rem solid variables.$dark
+      &:nth-last-child(1), &:nth-last-child(2)
+        border-bottom: none
+    &__link
+      display: block
+      padding: 2rem 0
+      color: variables.$dark
+      transition: .5s
+      &:hover
+        color: variables.$white
+  &__image
+    display: block
+    width: 30rem
+    height: 30rem
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    transition: .2s
+    pointer-events: none
+    object-fit: cover
+

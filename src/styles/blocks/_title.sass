@@ -1,0 +1,30 @@
+@use 'config/variables' as variables
+
+.title
+  font-weight: 700
+  font-family: 'Windsor'
+  span
+    display: inline-block
+  &--pink
+    color: variables.$light-pink
+  &--orange
+    color: variables.$orange
+  &--animated
+    perspective: 60rem
+    > span
+      transform-origin: center top
+      transform-style: preserve-3d
+      opacity: 0
+  &--h1
+    font-size: 6rem
+    line-height: 1
+    @media ( variables.$screen-sm )
+      line-height: 1
+      font-size: 14rem
+  &--h2
+    font-size: 4rem
+    line-height: 1.2
+    @media ( variables.$screen-sm )
+      line-height: 1
+      font-size: 9rem
+

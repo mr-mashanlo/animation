@@ -1,0 +1,20 @@
+@use 'config/variables' as variables
+
+.content
+  line-height: 1.8
+  > h1, > h2, > h3, > h4, > h5, > h6
+    margin-top: 3rem
+    @media ( variables.$screen-sm )
+      margin-top: 6rem
+  > p, > ul, > ol, > table
+    margin-top: 2rem
+    @media ( variables.$screen-sm )
+      margin-top: 4rem
+  ul
+    margin-left: 1.7rem
+    list-style-type: disc
+  ol
+    margin-left: 1.7rem
+    list-style-type: decimal
+  > *:first-child
+    margin-top: 0

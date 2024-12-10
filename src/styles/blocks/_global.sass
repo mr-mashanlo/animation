@@ -1,0 +1,97 @@
+@use 'config/variables' as variables
+
+html
+  font-size: calc(100vw / 375 * 10)
+  @media ( variables.$screen-sm )
+    font-size: calc(100vw / 1440 * 10)
+    overflow: hidden
+
+body
+  font-family: 'Geologica'
+  font-size: 1.5rem
+  line-height: 1.5
+  background: variables.$light
+  @media ( variables.$screen-sm )
+    font-size: 2rem
+
+.page
+  min-height: 100vh
+  &--dark
+    color: variables.$white
+    background: variables.$black
+    .hamburger .bar
+      background: variables.$white
+    .header-menu
+      color: variables.$black
+      @media ( variables.$screen-sm )
+        color: variables.$white
+
+.container
+  padding: 0 1rem
+  @media ( variables.$screen-sm )
+    padding: 0 5rem
+  &--medium
+    @media ( variables.$screen-sm )
+      padding: 0 20rem
+  &--small
+    @media ( variables.$screen-sm )
+      padding: 0 30rem
+
+.section
+  padding: 3rem 0
+  @media ( variables.$screen-sm )
+    padding: 10rem 0
+  &--accent
+    background: variables.$light-pink
+    color: variables.$white
+  &__title
+    text-align: center
+  &__content
+    margin-top: 3rem
+    @media ( variables.$screen-sm )
+      margin-top: 5rem
+
+.curtain
+  height: 130vh
+  aspect-ratio: 1010 / 650
+  position: fixed
+  top: -1rem
+  left: 0
+  z-index: 100
+  pointer-events: none
+  @media ( variables.$screen-xl )
+    width: 100%
+    height: auto
+  &--front path
+    fill: variables.$orange
+  &--back path
+    fill: variables.$white
+
+.menu
+  display: flex
+  flex-direction: column
+  @media ( variables.$screen-sm )
+    gap: 5rem
+    align-items: center
+    flex-direction: row
+
+.footer
+  @media ( variables.$screen-sm )
+    padding: 20rem 0
+
+.circle-button
+  display: block
+  width: 10rem
+  height: 10rem
+  border-radius: 50%
+  background: variables.$orange
+  color: variables.$white
+  display: flex
+  align-items: center
+  justify-content: center
+  opacity: 0
+  visibility: hidden
+  transition: .2s
+  position: fixed
+  top: 0
+  left: 0

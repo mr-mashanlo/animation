@@ -1,0 +1,39 @@
+@use 'config/variables' as variables
+
+.blog
+  position: relative
+  &-gallery
+    display: grid
+    gap: 2rem
+    @media ( variables.$screen-sm )
+      grid-template-columns: 1fr 1.2fr
+      align-items: end
+      gap: 0
+      position: relative
+    &--topspace
+      @media ( variables.$screen-sm )
+        margin-top: 10rem
+    &__image
+      display: block
+      width: 100%
+      &--one
+        @media ( variables.$screen-sm )
+          width: 60rem
+          position: absolute
+          bottom: 5rem
+          left: 0
+      &--two
+        @media ( variables.$screen-sm )
+          width: 100rem
+          margin-left: 60%
+      &--three
+        @media ( variables.$screen-sm )
+          width: 60rem
+          position: absolute
+          top: 5rem
+          left: 40rem
+  &__title
+    margin-top: 3rem
+    &--hight
+      @media ( variables.$screen-sm )
+        margin-top: -15rem
